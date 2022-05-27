@@ -46,3 +46,34 @@
     color: #fff;
     position: relative;
 }
+.landing-content{
+    margin: 30px;
+}
+.area-name{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:20px;
+    
+}
+.see-all-btn{
+    color:red ;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+}
+.resto-card{
+    display: flex;
+    justify-content: left;
+}
+.card{
+    margin-right:40px ;
+    display: flex;
+    flex-direction: column;
+}
+.resto-img{
+    width: 250px;
+    height: 350px;
+    border-radius:10px;
+    object-fit:cover;
+    margin-bottom: 10px;
+}
