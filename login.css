@@ -4,3 +4,93 @@
     box-sizing: border-box;
 }
 
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container > div {
+    width: 40%;
+}
+
+.about, .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo > img {
+    height: 400px;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 30px;
+}
+
+span {
+    color: #BABD42;
+}
+
+.login {
+    background-color: #FFEF82;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.login > div {
+    width: 80%;
+    text-align: center;
+}
+
+input {
+    font-size: 20px;
+    border: 2px solid #BABD42;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: solid 3px #82954B;
+}
+
+.login_bottom > button {
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+    background-color: #82954B;
+    font-weight: bold;
+    color: white;
+}
+
+.login_bottom > button:hover {
+    cursor: pointer;
+    background-color: #BABD42;
+}
+
+.create_account > a {
+    font-size: 15px;
+    color: #82954B;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container > div {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+  }
