@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div {
+    width: 40%;
+}
+
+.about, .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo > img {
     height: 400px;
 }
