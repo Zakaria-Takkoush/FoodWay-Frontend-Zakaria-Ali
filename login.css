@@ -61,20 +61,23 @@ input:focus {
     border: solid 3px #82954B;
 }
 
-.login_button > button {
+button {
     font-size: 22px;
     border: none;
     border-radius: 10px;
     padding: 5px;
-    width: 80%;
     background-color: #82954B;
     font-weight: bold;
     color: white;
 }
 
-.login_button > button:hover {
+button:hover {
     cursor: pointer;
     background-color: #BABD42;
+}
+
+.login_button > button {
+    width: 80%;
 }
 
 .create_account > a {
@@ -97,29 +100,60 @@ input:focus {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
-  /* Modal Content/Box */
+  /* Content Box */
   .sign_up {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 700%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
   
-  /* The Close Button */
-  .close {
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+    }
+
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+.sign_up_middle {
+    display: flex;
+    gap: 20px;
+}
+
+.signup_left, .signup_right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup_signup label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Format dropdown */
+select {
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #82954B;
+    font-weight: bold;
+    color: white;
+}
 
 @media only screen and (max-width: 600px) {
     .container > div {
@@ -131,3 +165,4 @@ input:focus {
         margin: 0;
     }
   }
+  
