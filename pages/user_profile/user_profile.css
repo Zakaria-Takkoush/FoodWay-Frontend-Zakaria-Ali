@@ -102,6 +102,11 @@ hr{
       cursor: pointer;
   }
 
+  /* hover on button */
+  .btn-green:hover {
+    cursor: pointer;
+    background-color: #BABD42;
+}
 
 /* popup edit form */
 .edit_popup {
@@ -171,4 +176,17 @@ select {
     font-weight: bold;
     color: white;
     margin-left: 15px;
+}
+
+.edit_profile input {
+    font-size: 20px;
+    border: 2px solid #BABD42;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.edit_profile input:focus {
+    outline: none;
+    border: solid 3px #82954B;
 }
