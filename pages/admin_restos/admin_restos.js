@@ -43,6 +43,16 @@ create.addEventListener("click", function () {
     new_restos.push(new_resto);
     localStorage.setItem("restos", JSON.stringify(new_restos));
     
+    clearData();
     console.log(new_restos);
 })
+
+function clearData() {
+    resto_name.value = "";
+    phone_number.value = "";
+    cate.value = "";
+    city.value = "";
+    description.value = "";
+
+}
 
