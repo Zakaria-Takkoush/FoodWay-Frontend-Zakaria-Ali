@@ -16,7 +16,7 @@
 
 
     <div class="header">
-        <img src="../assets/images/logo.png" alt="">
+        <!-- <img src="../assets/images/logo.png" alt=""> -->
     </div>
 
     <div class="container">
@@ -39,24 +39,14 @@
                     
                     <div class="selects">
                         <label for="">Category</label>
-                        <select name="category" id="category">
-                            <option value="">Select Category</option>
-                            <option value="1">Lebanese</option>
-                            <option value="2">Healthy</option>
-                            <option value="3">Fast Food</option>
-                        </select>
+                        <input type="text" id="cate">
                         <label for="">City</label>
-                        <select name="city" id="city">
-                            <option value="">Select City</option>
-                            <option value="1">Beirut</option>
-                            <option value="2">Saida</option>
-                            <option value="3">Tripoli</option>
-                        </select>
+                        <input type="text" id="city">
                     </div>
                     <label for="">description</label>
-                    <input type="text" class="desc-txt">
+                    <input type="text" id="description" class="desc-txt">
 
-                    <button type="submit">Create</button>
+                    <button type="submit" id="create">Create</button>
                 </form>
                 <div class="page_content">
                     <div class="tool_header">
@@ -69,24 +59,19 @@
 
                     <div class="panel">
                         <table>
-                            <tr>
-                                <th>Restaurant ID</th>
-                                <th>Name</th>
-                                <th>Phone Number</th>
-                                <th>Category</th>
-                                <th>City</th>
-                                <th>Edit</th>
-                                <th>Remove</th>
-                            </tr>
-                            <tr>
-                                <td>000</td>
-                                <td>Name</td>
-                                <td>0123456789</td>
-                                <td>Fast Food</td>
-                                <td>Beirut</td>
-                                <td><i class="fa-solid fa-pen-to-square"></i></td>
-                                <td><i class="fa-solid fa-xmark"></i></td>
-                            </tr>
+                            <tbody id="tbody">
+                                <tr>
+                                    <th>Restaurant ID</th>
+                                    <th>Restaurant Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Category</th>
+                                    <th>City</th>
+                                    <th>Description</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </tbody>
+                            
                         </table>
                     </div>
                 </div>
