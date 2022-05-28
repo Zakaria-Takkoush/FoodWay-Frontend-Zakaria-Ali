@@ -134,7 +134,9 @@ th, td {
     color: red;
     font-size: 25px;   
 }
-
+.edit,.delete{
+    cursor: pointer;
+}
 /* Utilities */
 button {
     font-size: 22px;

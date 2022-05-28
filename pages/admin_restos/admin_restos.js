@@ -64,13 +64,19 @@ function showData() {
         <td>${i}</td>
         <td>${new_restos[i].name}</td>
         <td>${new_restos[i].phone_number}</td>
-         <td>}${new_restos[i].cate}</td>
+         <td>${new_restos[i].cate}</td>
         <td>${new_restos[i].city}</td>
         <td>${new_restos[i].description}</td>   
-        <td><i class="fa-solid fa-pen-to-square"></i></td>
-        <td><i class="fa-solid fa-xmark"></i></td>
+        <td class="edit" onclick="updateData(${i})"><i class="fa-solid fa-pen-to-square"></i></td>
+        <td onclick="deleResto(${i})" class="delete"><i class="fa-solid fa-xmark"></i></td>
          </tr>`;
     }
     document.getElementById("tbody").innerHTML += table;
 }
 showData();
+
+function deleResto(i){
+    new_restos.splice(i,1);
+    localStorage.restos=JSON.stringify(new_restos);
+    showData();
+}
