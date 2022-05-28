@@ -7,5 +7,7 @@ for (let i=0;i<resto_card.length;i++){
 let see_all = document.getElementsByClassName("see-all-btn")[0];
 see_all.addEventListener("click",function(){
    for (let i=0;i<resto_card.length;i++){
-       resto_card[i].style.display="block";
-   } })
+       resto_card[i].classList.toggle("not-showen");
+   }
+  })
+  
