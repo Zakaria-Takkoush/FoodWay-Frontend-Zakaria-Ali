@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin: 0px 100px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-items>li {
+    margin-top: 40px;
+    margin-right: 10px;
+    font-weight: lighter;
+}
+
+.logo {
+    margin: 10px 20px;
+    height: 100%;
+}
+
+.profile-pic {
+    max-height: 35px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    max-height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides>img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.resto-info-sec {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 70px 0px;
+
+}
+
+.resto-info {
+    display: flex;
+}
+
+.resto-logo {
+    max-height: 100px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.rating{
+    background-color: #82954B;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 24px;
+    max-height:60px;
+    margin-right: 50px;
+}
+.review-btns{
+    display: flex;
+    margin: 10px 70px;
+}
+.add-review{
+    margin-right: 30px;
+}
+.about-resto{
+    margin: 50px 70px;
+}
+.about-resto>h1{
+    margin-bottom: 40px;
+}
+.about-resto-content{
+    display: flex;
+    justify-content: space-around;
+}
+.description{
+    max-width: 400px;
+}
+.description>h2{
+    margin-bottom: 20px;
+}
+
+.resto-contacts{
+    border: 0.5px  black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.contacts,.map-container{
+    margin: 10px;
+    line-height: 30px;
+}
+
+/* Utilities */
+.btn {
+    padding: 14px 10px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .btn-green {
+    background-color: #82954B;
+    color: #fff;
+    font-weight: bold;
+  }
+  .logo{
+      cursor: pointer;
+  }
