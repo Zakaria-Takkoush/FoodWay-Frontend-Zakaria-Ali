@@ -150,6 +150,50 @@
 .add-review{
     margin-right: 30px;
 }
+.about-resto{
+    margin: 50px 70px;
+}
+.about-resto>h1{
+    margin-bottom: 40px;
+}
+.about-resto-content{
+    display: flex;
+    justify-content: space-around;
+}
+.description{
+    max-width: 400px;
+}
+.description>h2{
+    margin-bottom: 20px;
+}
+
+.resto-contacts{
+    border: 0.5px  black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.contacts,.map-container{
+    margin: 10px;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Utilities */
 .btn {
     padding: 14px 10px;
