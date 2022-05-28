@@ -101,6 +101,15 @@ th, td {
     padding: 10px;
 }
 
+.fa-pen-to-square {
+    color: #82954B;
+    font-size: 25px;
+}
+
+.fa-xmark {
+    color: red;
+    font-size: 25px;   
+}
 
 
 
