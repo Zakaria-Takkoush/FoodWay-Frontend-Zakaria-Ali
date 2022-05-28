@@ -193,3 +193,92 @@
   .logo{
       cursor: pointer;
   }
+
+  .btn:hover {
+    cursor: pointer;
+    background-color: #BABD42;
+}
+
+
+/* pop-up reviews */
+/* popup signup form */
+.review_pop_up {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Content Box */
+  .add_review {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 50%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .add_review > div {
+      width: 90%;
+      text-align: center;
+  }
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* --- */
+
+
+.review_pop_up label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Format dropdown */
+select {
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #82954B;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px;
+}
+
+/* format text area */
+textarea {
+    resize: none;
+    font-size: 20px;
+    border: 2px solid #BABD42;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+ }
+
+ textarea:focus {
+    outline: none;
+    border: solid 3px #82954B;
+}
