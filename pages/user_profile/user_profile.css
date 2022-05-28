@@ -33,7 +33,7 @@
 }
 hr{
     border: 1px solid #BABD42;
-    width: 150%;
+    width: 100%;
     margin-top: 30px;
 }
 .profile-pic {
@@ -44,7 +44,7 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 70px 50px;
+    margin-bottom: 30px;
     background-color: #FFEF82;
     padding: 50px;
     width: 100%;
@@ -58,8 +58,6 @@ hr{
     max-height: 250px;
     margin-right: 20px;
 }
-
-
 
 /* Utilities */
 .btn {
