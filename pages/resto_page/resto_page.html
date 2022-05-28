@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="review-btns">
-        <div class="add-review btn btn-green">
+        <div class="add-review btn btn-green" id="add_review">
             &#9734 Add review
         </div>
         <div class="reviews-btn btn btn-green">
@@ -113,6 +113,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- Add review pop-up-->
+
+        <div class="review_pop_up" id="pop_up">
+            <div class="add_review">
+                <span class="close">&times;</span>
+                <div class="review_top">
+                    <h1>Leave a review</h1>
+                </div>
+              
+                <div class="rate_resto">
+                    <label for="rate">Rate the Restaurant</label>
+                    <select name="rate" id="">
+                        <option value="1">&#9733</option>
+                        <option value="2">&#9733 &#9733</option>
+                        <option value="3">&#9733 &#9733 &#9733</option>
+                        <option value="4">&#9733 &#9733 &#9733 &#9733 </option>
+                        <option value="5">&#9733 &#9733 &#9733 &#9733 &#9733</option>
+                    </select>
+                </div>
+
+                <div class="review_box">
+                    <label for="reviewbox">Review</label>
+                    <textarea name="reviewbox" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="review_bottom">
+                    <button type="submit" class="btn btn-green">Submit Review</button>
+                </div>
+        
+            </div>
+            
+        </div>
+
         <script src="resto_page.js"></script>
 </body>
 
