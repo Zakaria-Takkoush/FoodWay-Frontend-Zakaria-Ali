@@ -2,12 +2,12 @@
 var pop_up = document.getElementById("pop_up");
 
 // Get the button that opens the sign up
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("signup");
 
-// Get the <span> element that closes the modal
+// Get the <span> element that closes the form
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
+// When the user clicks on the button, open the form
 btn.onclick = function() {
   pop_up.style.display = "block";
 }
@@ -19,7 +19,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the pop_up, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == pop_up) {
+    pop_up.style.display = "none";
   }
 }
