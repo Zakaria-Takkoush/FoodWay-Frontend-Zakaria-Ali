@@ -1,3 +1,7 @@
+let logo = document.getElementsByClassName("logo")[0];
+logo.addEventListener("click", function(){
+    document.location='../landing_page/landing_page.html';
+})
 
 let slideIndex = 1;
 showSlides(slideIndex);
