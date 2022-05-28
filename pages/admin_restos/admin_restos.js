@@ -42,7 +42,7 @@ create.addEventListener("click", function () {
     }
     new_restos.push(new_resto);
     localStorage.setItem("restos", JSON.stringify(new_restos));
-    
+    showData();
     clearData();
     console.log(new_restos);
 })
@@ -56,3 +56,21 @@ function clearData() {
 
 }
 
+function showData() {
+    let table = '';
+    for (let i = 0; i < new_restos.length; i++) {
+        table += `
+        <tr>
+        <td>${i}</td>
+        <td>${new_restos[i].name}</td>
+        <td>${new_restos[i].phone_number}</td>
+         <td>}${new_restos[i].cate}</td>
+        <td>${new_restos[i].city}</td>
+        <td>${new_restos[i].description}</td>   
+        <td><i class="fa-solid fa-pen-to-square"></i></td>
+        <td><i class="fa-solid fa-xmark"></i></td>
+         </tr>`;
+    }
+    document.getElementById("tbody").innerHTML += table;
+}
+showData();
