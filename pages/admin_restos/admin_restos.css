@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Admin Page classes */
@@ -111,5 +112,19 @@ th, td {
     font-size: 25px;   
 }
 
+/* Utilities */
+button {
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #82954B;
+    font-weight: bold;
+    color: white;
+}
 
+button:hover {
+    cursor: pointer;
+    background-color: #BABD42;
+}
 
