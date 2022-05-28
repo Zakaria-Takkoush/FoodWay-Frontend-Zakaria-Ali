@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,15 @@
 </head>
 
 <body>
+
+
+
+
+    <div class="header">
+        <img src="../assets/images/logo.png" alt="">
+    </div>
+
     <div class="container">
-
-        <div class="header">
-            <img src="/assets/images/logo.png" alt="">
-        </div>
-
         <div class="page">
 
             <div class="side_bar">
@@ -23,43 +27,76 @@
                 <div id="users_page">Users</div>
                 <div id="reviews_page">Reviews</div>
             </div>
+            <div class="content">
 
-            <div class="page_content">
-                <div class="tool_header">
-                    Manage Restaurants
-                </div>
+                <form action="" class="form">
+                    <div class="name-phone">
+                         <label for="">Restaurant Name</label>
+                    <input type="text" name="resto_name" id="resto_name">
+                    <label for="">Phone Number</label>
+                    <input type="text" name="phone_number" id="phone_number">
+                    </div>
+                    
+                    <div class="selects">
+                        <label for="">Category</label>
+                        <select name="category" id="category">
+                            <option value="">Select Category</option>
+                            <option value="1">Lebanese</option>
+                            <option value="2">Healthy</option>
+                            <option value="3">Fast Food</option>
+                        </select>
+                        <label for="">City</label>
+                        <select name="city" id="city">
+                            <option value="">Select City</option>
+                            <option value="1">Beirut</option>
+                            <option value="2">Saida</option>
+                            <option value="3">Tripoli</option>
+                        </select>
+                    </div>
+                    <label for="">description</label>
+                    <input type="text" class="desc-txt">
 
-                <div class="add">
-                    <button>Add Restaurant</button>
-                </div>
+                    <button type="submit">Create</button>
+                </form>
+                <div class="page_content">
+                    <div class="tool_header">
+                        Manage Restaurants
+                    </div>
 
-                <div class="panel">
-                    <table>
-                        <tr>
-                            <th>Restaurant ID</th>
-                            <th>Name</th>
-                            <th>Phone Number</th>
-                            <th>Category</th>
-                            <th>City</th>
-                            <th>Edit</th>
-                            <th>Remove</th>
-                        </tr>
-                        <tr>
-                            <td>000</td>
-                            <td>Name</td>
-                            <td>0123456789</td>
-                            <td>Fast Food</td>
-                            <td>Beirut</td>
-                            <td><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                        </tr>
-                    </table>
+                    <div class="add">
+                        <button>Add Restaurant</button>
+                    </div>
+
+                    <div class="panel">
+                        <table>
+                            <tr>
+                                <th>Restaurant ID</th>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Category</th>
+                                <th>City</th>
+                                <th>Edit</th>
+                                <th>Remove</th>
+                            </tr>
+                            <tr>
+                                <td>000</td>
+                                <td>Name</td>
+                                <td>0123456789</td>
+                                <td>Fast Food</td>
+                                <td>Beirut</td>
+                                <td><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td><i class="fa-solid fa-xmark"></i></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
+
 
         </div>
 
     </div>
     <script src="admin_restos.js"></script>
 </body>
+
 </html>
