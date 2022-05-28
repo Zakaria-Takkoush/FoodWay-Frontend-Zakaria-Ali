@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page - Manage Restaurants</title>
     <link rel="stylesheet" href="admin_restos.css">
-    <link rel="stylesheet" href="/common.css">
 </head>
 
 <body>
@@ -19,9 +18,9 @@
         <div class="page">
 
             <div class="side_bar">
-                <div><a href="#">Restaurants</a></div>
-                <div><a href="#">Users</a></div>
-                <div><a href="#">Reviews</a></div>
+                <div class="current_page" id="restos_page">Restaurants</div>
+                <div id="users_page">Users</div>
+                <div id="reviews_page">Reviews</div>
             </div>
 
             <div class="page_content">
@@ -31,6 +30,6 @@
         </div>
 
     </div>
-
+    <script src="admin_restos.js"></script>
 </body>
 </html>
