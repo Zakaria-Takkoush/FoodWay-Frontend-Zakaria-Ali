@@ -23,3 +23,10 @@ window.onclick = function(event) {
     pop_up.style.display = "none";
   }
 }
+
+// Add landing page link through logo image
+
+let logo = document.getElementsByClassName("logo")[0];
+logo.addEventListener("click", function(){
+    document.location='../landing_page/landing_page.html';
+})
