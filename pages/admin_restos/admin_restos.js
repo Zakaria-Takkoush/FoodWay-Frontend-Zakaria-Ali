@@ -25,7 +25,7 @@ let phone_number = document.getElementById("phone_number");
 let cate = document.getElementById("cate");
 let city = document.getElementById("city");
 let description = document.getElementById("description");
-let new_restos=[];
+let new_restos = [];
 if (localStorage.restos != null) {
     new_restos = JSON.parse(localStorage.restos);
 } else {
@@ -40,11 +40,19 @@ create.addEventListener("click", function () {
         "cate": cate.value,
         "city": city.value
     }
-    new_restos.push(new_resto);
-    localStorage.setItem("restos", JSON.stringify(new_restos));
+    if (update === false) {
+        new_restos.push(new_resto);
+        localStorage.setItem("restos", JSON.stringify(new_restos));
+    } else {
+        new_resto[temp] = new_resto;
+        update = false;
+        create.innerHTML = "Create";
+    }
+
     showData();
     clearData();
-    console.log(new_restos);
+
+
 })
 
 function clearData() {
@@ -67,7 +75,7 @@ function showData() {
          <td>${new_restos[i].cate}</td>
         <td>${new_restos[i].city}</td>
         <td>${new_restos[i].description}</td>   
-        <td class="edit" onclick="updateData(${i})"><i class="fa-solid fa-pen-to-square"></i></td>
+        <td class="edit" onclick="updateData(${i})" ><i class="fa-solid fa-pen-to-square"></i></td>
         <td onclick="deleResto(${i})" class="delete"><i class="fa-solid fa-xmark"></i></td>
          </tr>`;
     }
@@ -75,8 +83,24 @@ function showData() {
 }
 showData();
 
-function deleResto(i){
-    new_restos.splice(i,1);
-    localStorage.restos=JSON.stringify(new_restos);
+function deleResto(i) {
+    new_restos.splice(i, 1);
+    localStorage.restos = JSON.stringify(new_restos);
     showData();
+}
+let update = false;
+let temp;
+function updateData(i) {
+
+    resto_name.value = new_restos[i].name;
+    phone_number.value = new_restos[i].phone_number;
+    cate.value = new_restos[i].cate;
+    city.value = new_restos[i].city;
+    //description.value = new_restos[i].description;
+    create.innerHTML = "Update"
+    update = true;
+    temp = i;
+    scroll({
+        top: 0, behavior: "smooth"
+    })
 }
