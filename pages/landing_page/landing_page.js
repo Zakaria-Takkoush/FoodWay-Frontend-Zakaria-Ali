@@ -14,35 +14,85 @@ see_all.addEventListener("click", function () {
     }
 })
 
-
-
-
 // Get all the restaurants in the database and show them in the landing page 
 window.addEventListener("load", function (event) {
 
-    axios({
-        method: 'get',
-        url: 'http://localhost/FoodWay-Backend/restaurants.php',
-    })
-        .then(function (response) {
-            
-            let restaurants = response.data;
-            let resto = '';
-            // Adding every resto in the database as the below div 
-            for (let i = 0; i < restaurants.length; i++) {
-                let resto_name = restaurants[i].resto_name;
-                resto = `
-            <div class="card not-showen">
-                    <img class="resto-img" src="../../assets/images/resto4.jpg" alt="">
-                    <div class="resto-card-content">
-                        <h3 class="resto-name">${resto_name}</h3>
+    
+    // let data = new FormData();
+    // // data.append('city_id', "1");
+    // axios({
+    //     method: 'get',
+    //     url: 'http://localhost/FoodWay-Backend/get_city.php',
+    //     // data: data,
+    // })
+    //     .then(function (response) {
+    //         console.log(response.data);
+    //         let cities = response.data;
+    //         let city = '';
+    //         for (let i = 0; i < cities.length; i++) {
+    //             let city_name = cities[i].city_name;
+    //             city = `
+    //             <div class="area-name">
+    //         <h1>${city_name}</h1>
+    //         <div class="see-all-btn" id="see-all">See All or See less &#8594</div>
+    //     </div>
+    //             `
+    //             document.getElementById("resto-card").innerHTML += city;
+                
+    //         }
+    //     }
+    //     )
+        axios({
+            method: 'get',
+            url: 'http://localhost/FoodWay-Backend/restaurants.php',
+        })
+            .then(function (response) {
+    
+                let restaurants = response.data;
+                let resto = '';
+                let city='';
+                // Adding every resto in the database as the below div 
+                for (let i = 0; i < restaurants.length; i++) {
+                    let resto_name = restaurants[i].resto_name;
+                    let resto_city = restaurants[i].city_id;
+                    resto = `
+                <div class="card not-showen">
+                        <img class="resto-img" src="../../assets/images/resto4.jpg" alt="">
+                        <div class="resto-card-content">
+                            <h3 class="resto-name">${resto_name}</h3>
+                            <h3 class="resto-location">${resto_city}</h3>
+                        </div>
                     </div>
-                </div>
-            `
-                document.getElementById("resto-card").innerHTML += resto;
+                `
+                    document.getElementById("resto-card").innerHTML += resto;
+                }
             }
-        }
-        )
+            )
+            //  let data = new FormData();
+    // data.append('city_id', "1");
+    // axios({
+    //     method: 'get',
+    //     url: 'http://localhost/FoodWay-Backend/get_city.php',
+    //     // data: data,
+    // })
+    //     .then(function (response) {
+    //         console.log(response.data);
+    //         let cities = response.data;
+    //         let city = '';
+    //         for (let i = 0; i < cities.length; i++) {
+    //             let city_name = cities[i].city_name;
+    //             city = `
+                
+    //         <h1>${city_name}</h1>
+            
+            
+    //             `
+    //             document.getElementsByClassName("area-name")[0].before(see_all)+= city;
+                
+    //         }
+    //     }
+    //     )
+    
 
 })
 
