@@ -1,11 +1,14 @@
 
 // On click of the resto Card go to the restaurant page
 let resto_card = document.getElementsByClassName("card");
+
 for (let i = 0; i < resto_card.length; i++) {
-    resto_card[i].addEventListener("click", function () {
-        document.location = "../resto_page/resto_page.html";
-    })
+    resto_card[i].addEventListener("click",directToResto)
 }
+function directToResto() {
+    document.location = "../resto_page/resto_page.html";
+}
+
 // Just show the first row and on click of see all u can see all restos and on click on it again u can see the first row
 let see_all = document.getElementsByClassName("see-all-btn")[0];
 see_all.addEventListener("click", function () {
@@ -17,7 +20,7 @@ see_all.addEventListener("click", function () {
 // Get all the restaurants in the database and show them in the landing page 
 window.addEventListener("load", function (event) {
 
-    
+
     // let data = new FormData();
     // // data.append('city_id', "1");
     // axios({
@@ -54,9 +57,10 @@ window.addEventListener("load", function (event) {
                 // Adding every resto in the database as the below div 
                 for (let i = 0; i < restaurants.length; i++) {
                     let resto_name = restaurants[i].resto_name;
+                    let resto_id = restaurants[i].resto_id;
                     let resto_city = restaurants[i].city_id;
                     resto = `
-                <div class="card not-showen">
+                <div  class="card not-showen"   onclick="directToResto()" id="${resto_id}">
                         <img class="resto-img" src="../../assets/images/resto4.jpg" alt="">
                         <div class="resto-card-content">
                             <h3 class="resto-name">${resto_name}</h3>
