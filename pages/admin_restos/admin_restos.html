@@ -1,83 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Page - Manage Restaurants</title>
-    <link rel="stylesheet" href="admin_restos.css">
-    <script src="https://kit.fontawesome.com/6d5273fb5e.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="admin_restos.css" />
+    <script
+      src="https://kit.fontawesome.com/6d5273fb5e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
-
-
-
-    <div class="header">
-        <!-- <img src="../assets/images/logo.png" alt=""> -->
-    </div>
-
+  <body>
     <div class="container">
-        <div class="page">
+      
+        <div class="header">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
 
-            <div class="side_bar">
-                <div class="current_page" id="restos_page">Restaurants</div>
-                <div id="users_page">Users</div>
-                <div id="reviews_page">Reviews</div>
-            </div>
-            <div class="content">
+      <div class="page">
 
-                <form action="" class="form">
-                    <div class="name-phone">
-                         <label for="">Restaurant Name</label>
-                    <input type="text" name="resto_name" id="resto_name">
-                    <label for="">Phone Number</label>
-                    <input type="text" name="phone_number" id="phone_number">
-                    </div>
-                    
-                    <div class="selects">
-                        <label for="">Category</label>
-                        <input type="text" id="cate">
-                        <label for="">City</label>
-                        <input type="text" id="city">
-                    </div>
-                    <label for="">description</label>
-                    <input type="textarea" id="description" class="desc-txt">
+        <div class="side_bar">
+          <div class="current_page" id="restos_page">Restaurants</div>
+          <div id="users_page">Users</div>
+          <div id="reviews_page">Reviews</div>
+        </div>
 
-                    <button type="submit" id="create">Create</button>
-                </form>
-                <div class="page_content">
-                    <div class="tool_header">
-                        Manage Restaurants
-                    </div>
-
-                    <div class="panel">
-                        <table>
-                            <tbody id="tbody">
-                                <tr>
-                                    <th>Restaurant ID</th>
-                                    <th>Restaurant Name</th>
-                                    <th>Phone Number</th>
-                                    <th>Category</th>
-                                    <th>City</th>
-                                    <th>Description</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                    </div>
-                </div>
+        <div class="page_content">
+            <div class="tool_header">
+              Manage Restaurants
             </div>
 
+            <form action="" class="form">
+              <div class="name-phone">
+                <label for="">Restaurant Name</label>
+                <input type="text" name="resto_name" id="resto_name" />
+                <label for="">Phone Number</label>
+                <input type="text" name="phone_number" id="phone_number" />
+              </div>
+  
+              <div class="selects">
+                <label for="">Category</label>
+                <input type="text" id="cate" />
+                <label for="">City</label>
+                <input type="text" id="city" />
+              </div>
+              <label for="">Description</label>
+              <input type="textarea" id="description" class="desc-txt" />
+  
+              <button type="submit" id="create">Create</button>
+            </form>
+
+            <div class="panel">
+              <table>
+                <tbody id="tbody">
+                  <tr>
+                    <th>Restaurant ID</th>
+                    <th>Restaurant Name</th>
+                    <th>Phone Number</th>
+                    <th>Category</th>
+                    <th>City</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
         </div>
 
+      </div>
+
     </div>
     <script src="admin_restos.js"></script>
-</body>
-
+  </body>
 </html>

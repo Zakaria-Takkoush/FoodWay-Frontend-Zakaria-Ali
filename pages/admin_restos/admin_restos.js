@@ -19,13 +19,13 @@ reviews_page.addEventListener("click", function () {
     document.location = '../admin_reviews/admin_reviews.html';
 })
 
-
+/* Edit Records */
 let resto_name = document.getElementById("resto_name");
 let phone_number = document.getElementById("phone_number");
 let cate = document.getElementById("cate");
 let city = document.getElementById("city");
 let description = document.getElementById("description");
-let new_restos = [];
+let new_restos; //= [];
 if (localStorage.restos != null) {
     new_restos = JSON.parse(localStorage.restos);
 } else {
