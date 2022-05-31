@@ -158,3 +158,36 @@ button:hover {
     background-color: #BABD42;
 }
 
+@media only screen and (max-width: 600px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .side_bar {
+        height: fit-content;
+        width: 100%;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .page_content {
+        flex-grow: 0;
+    }
+
+    .panel {
+        width: 400px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+    
+    .form > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
