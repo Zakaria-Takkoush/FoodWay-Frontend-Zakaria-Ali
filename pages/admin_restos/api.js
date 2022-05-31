@@ -1,19 +1,15 @@
-let create_account = document.getElementById("sign_up_btn");
+let add_resto = document.getElementById("create");
 
-create_account.addEventListener("click", function(event) {
+add_resto.addEventListener("click", function(event) {
     event.preventDefault()
 
     // params: first_name, last_name, gender, email, password, phone_number, city_id
 
-    const first_name = document.getElementById("fname").value 
-    const last_name = document.getElementById("lname").value
-    const gender = document.getElementById("gender").value
- //   const gender_val = select.options[gender.selectedIndex].value;
-    const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
-    const rep_password = document.getElementById("r_password").value
-    //const phone_number = document.getElementById("number").value
+    const resto_name = document.getElementById("resto_name").value 
+    const phone_number = document.getElementById("phone_number").value
     const city_id = document.getElementById("city").value
+    const desc = document.getElementById("city").value
+    const cat = document.getElementById("cate").value
 
     if (password !== rep_password) {
         alert("Passwords do not match!")
