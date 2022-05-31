@@ -5,9 +5,9 @@ let any;
 for (let i = 0; i < resto_card.length; i++) {
     resto_card[i].addEventListener("click",directToResto)
 }
-function directToResto(mii) {
+function directToResto(id) {
     document.location = "../resto_page/resto_page.html";
-    localStorage.setItem("resto_iddd", mii);
+    localStorage.setItem("resto_id", id);
 }
 
 // Just show the first row and on click of see all u can see all restos and on click on it again u can see the first row
@@ -60,7 +60,7 @@ see_all.addEventListener("click", function () {
                     let resto_id = restaurants[i].resto_id;
                     let resto_city = restaurants[i].city_id;
                     resto = `
-                <div  class="card not-showen"   onclick="directToResto(this.id  )" id="${resto_id}">
+                <div  class="card not-showen"   onclick="directToResto(this.id)" id="${resto_id}">
                         <img class="resto-img" src="../../assets/images/resto4.jpg" alt="">
                         <div class="resto-card-content">
                             <h3 class="resto-name">${resto_name}</h3>
@@ -72,7 +72,7 @@ see_all.addEventListener("click", function () {
                 }
             }
             )
-            //  let data = new FormData();
+    //  let data = new FormData();
     // data.append('city_id', "1");
     // axios({
     //     method: 'get',
