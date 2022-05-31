@@ -1,23 +1,30 @@
+// variabes
 var resto_page = document.getElementById("restos_page")
 var users_page = document.getElementById("users_page")
 var reviews_page = document.getElementById("reviews_page")
 var logo = document.getElementsByClassName("header")[0]
 
+// on click on logo go to the landing page
 logo.addEventListener("click", function(){
     document.location='../landing_page/landing_page.html';
 })
-
+// on click on resto page go to the resto admin page
 resto_page.addEventListener("click", function(){
     document.location='../admin_restos/admin_restos.html';
 })
-
+// on click on users page go to the users admin page
 users_page.addEventListener("click", function(){
     document.location='../admin_users/admin_users.html';
 })
-
+// on click on reviews page go to the reviews admin page
 reviews_page.addEventListener("click", function(){
     document.location='../admin_reviews/admin_reviews.html';
 })
+
+
+
+
+// Api Call to get all users from the database
 
 let table; // body table containing users
 
