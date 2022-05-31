@@ -20,6 +20,7 @@ reviews_page.addEventListener("click", function () {
 })
 
 /* Edit Records */
+/*
 let resto_name = document.getElementById("resto_name");
 let phone_number = document.getElementById("phone_number");
 let cate = document.getElementById("cate");
@@ -104,3 +105,4 @@ function updateData(i) {
         top: 0, behavior: "smooth"
     })
 }
+*/

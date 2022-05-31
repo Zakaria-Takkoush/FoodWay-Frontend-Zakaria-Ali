@@ -42,14 +42,34 @@
   
               <div class="selects">
                 <label for="">Category</label>
-                <input type="text" id="cate" />
+                <select name="" id="cate">
+                  <option value="0">Fast Food</option>
+                  <option value="1">Lebanese</option>
+                  <option value="2">Vegeterian</option>
+                  <option value="3">Home Kitchen</option>
+                  <option value="4">Burgers</option>
+                  <option value="5">Pizza</option>
+                  <option value="6">Italian</option>
+                  <option value="7">Chinese</option>
+                  <option value="8">Desserts</option>
+              </select>
                 <label for="">City</label>
-                <input type="text" id="city" />
+                  <select name="" id="city">
+                      <option value="0">Beirut</option>
+                      <option value="1">Saida</option>
+                      <option value="2">Tripoli</option>
+                      <option value="3">Tyre</option>
+                      <option value="4">Baalbeck</option>
+                      <option value="5">Jbeil</option>
+                      <option value="6">Batroun</option>
+                      <option value="7">Jounieh</option>
+                      <option value="8">Nabateye</option>
+                  </select>
               </div>
               <label for="">Description</label>
               <input type="textarea" id="description" class="desc-txt" />
   
-              <button type="submit" id="create">Create</button>
+              <button id="create">Create</button>
             </form>
 
             <div class="panel">
@@ -75,5 +95,7 @@
 
     </div>
     <script src="admin_restos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="api.js"></script>
   </body>
 </html>
