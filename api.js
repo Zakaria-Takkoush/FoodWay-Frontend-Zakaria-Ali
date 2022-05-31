@@ -55,4 +55,17 @@ create_account.addEventListener("click", function(event) {
 })
 
 
+// get the id of the user
 
+/*
+// let data = new FormData();
+axios({
+    method: "get",
+    url: "http://localhost/FoodWay-Backend/login.php",
+    //        data: data,
+  }).then(function (response) {
+    users = response.data;
+    console.log(response.data);
+  
+    // loop through users object array to grab dat
+    */

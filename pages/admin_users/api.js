@@ -1,4 +1,4 @@
-let table;
+let table; // body table containing users
 
 // let data = new FormData();
 axios({
@@ -10,6 +10,8 @@ axios({
   console.log(response.data);
   //   console.log(response.data[0].first_name)
   //   console.log(response.data[1].user_id)
+
+  // loop through users object array to grab data
 
   for (let i = 0; i < users.length; i++) {
     const id = users[i].user_id;
@@ -24,6 +26,8 @@ axios({
     const is_admin = users[i].is_admin;
 
 
+    //Apend each new user to the users table
+
     table += `
         <tr>
         <td>${id}</td>
@@ -37,4 +41,3 @@ axios({
   }
 );
 
-// identify variables
