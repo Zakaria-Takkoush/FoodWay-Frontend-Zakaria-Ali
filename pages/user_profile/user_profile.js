@@ -71,7 +71,71 @@ axios({
     // console.log(response.data[0]);
     // console.log(response.data);
 
+<<<<<<< HEAD
     //user_city.innerHTML = response.data[0].city_id;
+=======
+    //user_city.innerHTML = response.data[0]
+>>>>>>> a55ce1670e00584786b7a91daa7f87716032bb4c
 
   }
   )
+
+  // edit profile
+
+  let edit_account = document.getElementById("change_prof");
+
+  edit_account.addEventListener("click", function(event) {
+    event.preventDefault()
+
+    // params: first_name, last_name, gender, email, password, phone_number, city_id
+
+    const first_name = document.getElementById("fname").value 
+    const last_name = document.getElementById("lname").value
+    const gender = document.getElementById("gender").value
+    const email = document.getElementById("email").value
+    const password = document.getElementById("password").value
+    const rep_password = document.getElementById("r_password").value
+    //const phone_number = document.getElementById("number").value
+    const city_id = document.getElementById("city").value
+
+    if (password !== rep_password) {
+        alert("Passwords do not match!")
+        return
+    }
+
+    //Axios Function - Edit Profile
+
+    let data = new FormData();
+    data.append('user_id', localStorage.getItem("logged_id"));
+    data.append('first_name', first_name);
+    data.append('last_name', last_name);
+    data.append('gender', gender);
+    data.append('email', email);
+    data.append('password', password);
+    // data.append('phone_number', '123');
+    data.append('city_id', city_id);
+    axios({
+        method: 'post',
+        url: 'http://localhost/FoodWay-Backend/edit_profile.php',
+        data: data,
+    })
+    .then(function (response) {
+        let result = response.data;
+        let message = result.success;
+        console.log(response.data)
+        // if (message === true) {
+        //     document.getElementsByClassName("signup_top")[0].textContent = "Profile Edited!"
+        // }
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("gender").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("r_password").value = "";
+        //const phone_number = document.getElementById("number").value
+        document.getElementById("city").value = "";
+        //document.location = "user_profile.html";
+        }
+    )
+
+})
