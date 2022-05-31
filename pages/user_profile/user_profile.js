@@ -70,7 +70,7 @@ axios({
     // console.log(response.data[0]);
     // console.log(response.data);
 
-    user_city.innerHTML = response.data[0]
+    //user_city.innerHTML = response.data[0]
 
   }
   )
@@ -107,7 +107,7 @@ axios({
     data.append('gender', gender);
     data.append('email', email);
     data.append('password', password);
-    data.append('phone_number', '123');
+    // data.append('phone_number', '123');
     data.append('city_id', city_id);
     axios({
         method: 'post',
@@ -117,9 +117,10 @@ axios({
     .then(function (response) {
         let result = response.data;
         let message = result.success;
-        if (message === true) {
-            document.getElementsByClassName("signup_top")[0].textContent = "Profile Edited!"
-        }
+        console.log(response.data)
+        // if (message === true) {
+        //     document.getElementsByClassName("signup_top")[0].textContent = "Profile Edited!"
+        // }
         document.getElementById("fname").value = "";
         document.getElementById("lname").value = "";
         document.getElementById("gender").value = "";
@@ -128,7 +129,7 @@ axios({
         document.getElementById("r_password").value = "";
         //const phone_number = document.getElementById("number").value
         document.getElementById("city").value = "";
-        document.location = "user_profile.html";
+        //document.location = "user_profile.html";
         }
     )
 
