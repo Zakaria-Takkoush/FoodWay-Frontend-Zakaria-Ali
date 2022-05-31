@@ -41,6 +41,14 @@ create_account.addEventListener("click", function(event) {
         if (message === "Account Created!") {
             document.getElementsByClassName("signup_top")[0].textContent = "Account Created!"
         }
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("gender").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("r_password").value = "";
+        //const phone_number = document.getElementById("number").value
+        document.getElementById("city").value = "";
         }
     )
 
