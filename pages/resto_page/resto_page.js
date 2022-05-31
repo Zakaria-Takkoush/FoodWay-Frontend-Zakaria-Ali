@@ -113,6 +113,11 @@ axios({
   .then(function (response) {
     console.log(response);
     let avg_rating = response.data[0];
-    rating.innerHTML = avg_rating.avg+ " &#9733";
+    if(avg_rating.avg == null){
+      rating.innerHTML = "No rating yet";
+    }else{
+      rating.innerHTML = avg_rating.avg+ " &#9733";
+    }
+    
   }
   )
