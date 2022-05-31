@@ -1,7 +1,9 @@
 let logo = document.getElementsByClassName("logo")[0];
 let resto_name = document.getElementsByClassName("resto-name");
-let city_name = document.getElementById("city-name");
+let city_name = document.getElementsByClassName("city-name");
 let description = document.getElementById("description");
+let phone_number = document.getElementById("phone-number");
+let rating = document.getElementById("rating")
 logo.addEventListener("click", function () {
   document.location = '../landing_page/landing_page.html';
 })
@@ -79,10 +81,12 @@ axios({
       resto_name[i].innerHTML = resto.resto_name;
     }
     description.innerHTML = resto.description;
+    phone_number.innerHTML += resto.phone_number;
   }
   )
 
-  let data1 = new FormData();
+
+let data1 = new FormData();
 data1.append('resto_id', localStorage.getItem("resto_id"));
 axios({
   method: 'post',
@@ -92,7 +96,23 @@ axios({
   .then(function (response) {
     console.log(response);
     let city = response.data[0];
-    city_name.innerHTML = city.city_name;
+    for (let i = 0; i < city_name.length; i++) {
+      city_name[i].innerHTML = city.city_name;
+    }
   }
   )
 
+
+let data2 = new FormData();
+data2.append('id', localStorage.getItem("resto_id"));
+axios({
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/get_average_rating.php',
+  data: data2,
+})
+  .then(function (response) {
+    console.log(response);
+    let avg_rating = response.data[0];
+    rating.innerHTML = avg_rating.avg+ " &#9733";
+  }
+  )
