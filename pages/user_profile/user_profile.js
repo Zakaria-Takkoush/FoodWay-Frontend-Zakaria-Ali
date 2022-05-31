@@ -53,7 +53,7 @@ logo.addEventListener("click", function(){
             //user_name.innerHTML = user.first_name + " " + user.last_name    // display the user name
             for (let i =0; i < user_name.length; i++) {
               user_name[i].innerHTML = user.first_name + " " + user.last_name
-              us
+              
             }
   }
   )
@@ -71,7 +71,7 @@ axios({
     // console.log(response.data[0]);
     // console.log(response.data);
 
-    user_city.innerHTML = response.data[0]
+    //user_city.innerHTML = response.data[0].city_id;
 
   }
   )
