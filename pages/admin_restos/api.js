@@ -1,5 +1,6 @@
 let add_resto = document.getElementById("create");
-
+let edit = document.getElementById("edit");
+let delete_resto= document.getElementById("delete");
 
 add_resto.addEventListener("click", function (event) {
     event.preventDefault()
@@ -75,7 +76,21 @@ axios({
     }
     )
 
-    
+    delete_resto.addEventListener("click", deleResto());
+
+    function deleResto(resto_id) {
+    let data = new FormData();
+    data.append('id', resto_id);
+    axios({
+        method: 'post',
+        url: 'http://localhost/FoodWay-Backend/delete_resto.php',
+        data: data,
+    })
+        .then(function (response) {
+            let result = response.data;
+            console.log(result);
+        }
+        )}
 
 
 
