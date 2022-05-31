@@ -283,3 +283,30 @@ textarea {
     outline: none;
     border: solid 3px #82954B;
 }
+
+
+    @media (max-width: 700px){
+        *{
+            font-size: smaller smaller;
+        }
+        .about-resto-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-resto-content>div{
+            margin-bottom: 20px;
+        }
+        #rating{
+            font-size: 16px;
+        }
+
+    }
+    @media (max-width: 550px){
+        .resto-info-sec {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 50px 70px 0px;
+        }
+    }
