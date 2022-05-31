@@ -1,3 +1,4 @@
+// variables
 let logo = document.getElementsByClassName("logo")[0];
 let resto_name = document.getElementsByClassName("resto-name");
 let city_name = document.getElementById("city-name");
@@ -9,12 +10,15 @@ let review_box= document.getElementById("reviewbox");
 let review_popup = document.getElementById("pop_up");
 let selected_rating=document.getElementsByClassName("selected-rating");
 let profile=document.getElementById("nav-items");
-//profile.style.cursor = "pointer";
+profile.style.cursor = "pointer";
 logo.addEventListener("click", function () {
   document.location = '../landing_page/landing_page.html';
 })
-
-
+// on click on user pic or user go to the profile page
+profile.addEventListener("click",function(){
+  document.location="../user_profile/user_profile.html";
+})
+// startin of silder images
 let slide_index = 1;
 showSlides(slide_index);
 
@@ -27,7 +31,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slide_index = n);
 }
-
+// this function is to go to the next or previous slide
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -70,9 +74,7 @@ window.onclick = function (event) {
   }
 }
 
-profile.addEventListener("click",function(){
-  document.location="../user_profile/user_profile.html";
-})
+
 
 // This api call is for get all of the restaurant targetted by the user
 let data = new FormData();
