@@ -10,14 +10,11 @@ let review_box= document.getElementById("reviewbox");
 let review_popup = document.getElementById("pop_up");
 let selected_rating=document.getElementsByClassName("selected-rating");
 let profile=document.getElementById("nav-items");
-profile.style.cursor = "pointer";
 logo.addEventListener("click", function () {
   document.location = '../landing_page/landing_page.html';
 })
 // on click on user pic or user go to the profile page
-profile.addEventListener("click",function(){
-  document.location="../user_profile/user_profile.html";
-})
+
 // startin of silder images
 let slide_index = 1;
 showSlides(slide_index);
@@ -172,3 +169,7 @@ axios({
   }
   )
 }
+
+profile.addEventListener("click",function(){
+  document.location="../user_profile/user_profile.html";
+})
