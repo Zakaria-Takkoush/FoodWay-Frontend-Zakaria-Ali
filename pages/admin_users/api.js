@@ -13,16 +13,16 @@ let data = new FormData();
         }
     )
 
-const id = users = response.data[i].user_id
-const f_name = users = response.data[i].first_name
-const l_name = users = response.data[i].last_name
-const gender = users = response.data[i].gender
-const email = users = response.data[i].email
-const password = users = response.data[i].password
-const phone_number = users = response.data[i].phone_number
-const city_id = users = response.data[i].city_id
-const image = users = response.data[i].image
-const is_admin = users = response.data[i].is_admin
+const id = users = response.data[0].user_id
+const f_name = users = response.data[0].first_name
+const l_name = users = response.data[0].last_name
+const gender = users = response.data[0].gender
+const email = users = response.data[0].email
+const password = users = response.data[0].password
+const phone_number = users = response.data[0].phone_number
+const city_id = users = response.data[0].city_id
+const image = users = response.data[0].image
+const is_admin = users = response.data[0].is_admin
 
 // identify variables
 
