@@ -81,3 +81,18 @@ axios({
     description.innerHTML = resto.description;
   }
   )
+
+  let data1 = new FormData();
+data1.append('resto_id', localStorage.getItem("resto_id"));
+axios({
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/get_city.php',
+  data: data1,
+})
+  .then(function (response) {
+    console.log(response);
+    let city = response.data[0];
+    city_name.innerHTML = city.city_name;
+  }
+  )
+
