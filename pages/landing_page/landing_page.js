@@ -98,6 +98,26 @@ see_all.addEventListener("click", function () {
     //     )
     
 
+    // Get user info and insert them to landing page...
+
+    // To change the name
+    user_name = document.getElementById("user_name")
+
+    // Link id to landing page
+    let data = new FormData();
+        data.append('user_id', localStorage.getItem("logged_id"));
+        axios({
+        method: 'post',
+        url: 'http://localhost/FoodWay-Backend/get_user_data.php',
+        data: data,
+        })
+        .then(function (response) {
+            // console.log(response.data);
+            // console.log(response.data[0].first_name);
+            let user = response.data[0];    // grab the jason data
+            user_name.innerHTML = user.first_name + " " + user.last_name    // display the user name
+  }
+  )
 
 
 
