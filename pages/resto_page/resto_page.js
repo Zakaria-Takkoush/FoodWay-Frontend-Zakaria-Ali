@@ -1,9 +1,9 @@
 let logo = document.getElementsByClassName("logo")[0];
-let resto_name= document.getElementById("resto-name");
-let  city_name= document.getElementById("city-name");
+let resto_name = document.getElementsByClassName("resto-name");
+let city_name = document.getElementById("city-name");
 let description = document.getElementById("description");
-logo.addEventListener("click", function(){
-    document.location='../landing_page/landing_page.html';
+logo.addEventListener("click", function () {
+  document.location = '../landing_page/landing_page.html';
 })
 
 
@@ -24,16 +24,16 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slide_index = 1}
-  if (n < 1) {slide_index = slides.length}
+  if (n > slides.length) { slide_index = 1 }
+  if (n < 1) { slide_index = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slide_index-1].style.display = "block";
-  dots[slide_index-1].className += " active";
+  slides[slide_index - 1].style.display = "block";
+  dots[slide_index - 1].className += " active";
 }
 
 
@@ -48,40 +48,36 @@ var btn = document.getElementById("add_review");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the form
-btn.onclick = function() {
+btn.onclick = function () {
   pop_up.style.display = "block";
 }
 // When the user clicks on <span> (x), close the pop_up
-span.onclick = function() {
+span.onclick = function () {
   pop_up.style.display = "none";
 }
 // When the user clicks anywhere outside of the pop_up, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == pop_up) {
     pop_up.style.display = "none";
   }
 }
 
- 
+
 
 
 let data = new FormData();
 data.append('resto_id', localStorage.getItem("resto_id"));
 axios({
-    method: 'post',
-    url: 'http://localhost/FoodWay-Backend/get_restaurant.php',
-    data: data,
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/get_restaurant.php',
+  data: data,
 })
-.then(function (response) {
+  .then(function (response) {
     console.log(response);
     let resto = response.data[0];
-
-  resto_name.innerHTML=resto.resto_name;
-  description.innerHTML=resto.description;
-  
-
-
-
-
+    for (let i = 0; i < resto_name.length; i++) {
+      resto_name[i].innerHTML = resto.resto_name;
     }
-)
+    description.innerHTML = resto.description;
+  }
+  )
