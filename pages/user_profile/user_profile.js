@@ -59,4 +59,18 @@ logo.addEventListener("click", function(){
 
     // Link city to profile page:
 
-    
+let data1 = new FormData();
+data.append('user_id', localStorage.getItem("logged_id"));
+axios({
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/get_user_city.php',
+  data: data1,
+})
+  .then(function (response) {
+    console.log(response.data);
+    // let city = response.data[0];
+
+    // city_name.innerHTML = city.city_name;
+
+  }
+  )
