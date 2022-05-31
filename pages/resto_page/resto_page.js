@@ -58,3 +58,18 @@ window.onclick = function(event) {
     pop_up.style.display = "none";
   }
 }
+
+ 
+
+
+let data = new FormData();
+data.append('resto_id', localStorage.getItem("resto_id"));
+axios({
+    method: 'post',
+    url: 'http://localhost/FoodWay-Backend/get_restaurant.php',
+    data: data,
+})
+.then(function (response) {
+    console.log(response);
+    }
+)

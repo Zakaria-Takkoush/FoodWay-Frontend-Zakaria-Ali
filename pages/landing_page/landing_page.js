@@ -1,12 +1,13 @@
 
 // On click of the resto Card go to the restaurant page
 let resto_card = document.getElementsByClassName("card");
-
+let any;
 for (let i = 0; i < resto_card.length; i++) {
     resto_card[i].addEventListener("click",directToResto)
 }
-function directToResto() {
+function directToResto(mii) {
     document.location = "../resto_page/resto_page.html";
+    localStorage.setItem("resto_iddd", mii);
 }
 
 // Just show the first row and on click of see all u can see all restos and on click on it again u can see the first row
@@ -17,9 +18,8 @@ see_all.addEventListener("click", function () {
     }
 })
 
-// Get all the restaurants in the database and show them in the landing page 
-window.addEventListener("load", function (event) {
 
+// 
 
     // let data = new FormData();
     // // data.append('city_id', "1");
@@ -60,7 +60,7 @@ window.addEventListener("load", function (event) {
                     let resto_id = restaurants[i].resto_id;
                     let resto_city = restaurants[i].city_id;
                     resto = `
-                <div  class="card not-showen"   onclick="directToResto()" id="${resto_id}">
+                <div  class="card not-showen"   onclick="directToResto(this.id  )" id="${resto_id}">
                         <img class="resto-img" src="../../assets/images/resto4.jpg" alt="">
                         <div class="resto-card-content">
                             <h3 class="resto-name">${resto_name}</h3>
@@ -98,7 +98,7 @@ window.addEventListener("load", function (event) {
     //     )
     
 
-})
+
 
 
 
