@@ -4,6 +4,12 @@ let city_name = document.getElementById("city-name");
 let description = document.getElementById("description");
 let phone_number = document.getElementById("phone-number");
 let rating = document.getElementById("rating")
+let review_submit= document.getElementById("review-submit");
+let review_box= document.getElementById("reviewbox");
+let review_popup = document.getElementById("pop_up");
+let selected_rating=document.getElementsByClassName("selected-rating");
+let profile=document.getElementById("nav-items");
+//profile.style.cursor = "pointer";
 logo.addEventListener("click", function () {
   document.location = '../landing_page/landing_page.html';
 })
@@ -64,9 +70,11 @@ window.onclick = function (event) {
   }
 }
 
+profile.addEventListener("click",function(){
+  document.location="../user_profile/user_profile.html";
+})
 
-
-
+// This api call is for get all of the restaurant targetted by the user
 let data = new FormData();
 data.append('resto_id', localStorage.getItem("resto_id"));
 axios({
@@ -85,7 +93,7 @@ axios({
   }
   )
 
-
+// This api call is for get the city name of the restaurant targetted by the user
 let data1 = new FormData();
 data1.append('resto_id', localStorage.getItem("resto_id"));
 axios({
@@ -101,7 +109,8 @@ axios({
 
   }
   )
-  
+
+// This api call is for get the  avarage rating of the restaurant targetted by the user
 let data2 = new FormData();
 data2.append('id', localStorage.getItem("resto_id"));
 axios({
@@ -120,3 +129,44 @@ axios({
 
   }
   )
+
+
+// Onclick of submite call theses apis
+review_submit.onclick = function () {
+
+  if(review_box!=null){
+    // This api call is for to add review by a user to the restaurant targetted by the user
+let data3 = new FormData();
+data3.append('user_id', localStorage.getItem("logged_id"));
+data3.append("rev_text", review_box.value);
+data3.append("resto_id", localStorage.getItem("resto_id"));
+axios({
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/add_review.php',
+  data: data3,
+})
+  .then(function (response) {
+    console.log(response);
+    
+  }
+  )}
+  else {
+    alert("Please enter a review");
+  }
+
+//This api call is for to add rating to the restaurant targetted by the user
+let data4 = new FormData();
+data4.append('user_id', localStorage.getItem("logged_id"));
+data4.append("rating", 5);
+data4.append("resto_id", localStorage.getItem("resto_id"));
+axios({
+  method: 'post',
+  url: 'http://localhost/FoodWay-Backend/add_rating.php',
+  data: data4,
+})
+  .then(function (response) {
+    console.log("thisss"+response);
+    review_popup.style.display = "none";
+  }
+  )
+}

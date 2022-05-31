@@ -1,6 +1,8 @@
 
 // On click of the resto Card go to the restaurant page
 let resto_card = document.getElementsByClassName("card");
+let profile=document.getElementById("landing-nav");
+profile.style.cursor="pointer";
 let any;
 for (let i = 0; i < resto_card.length; i++) {
     resto_card[i].addEventListener("click",directToResto)
@@ -19,6 +21,11 @@ see_all.addEventListener("click", function () {
 })
 
 
+
+
+profile.addEventListener("click",function(){
+    document.location="../user_profile/user_profile.html";
+})
 // 
 
     // let data = new FormData();
