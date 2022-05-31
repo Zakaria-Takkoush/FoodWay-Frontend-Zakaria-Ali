@@ -71,11 +71,7 @@ axios({
     // console.log(response.data[0]);
     // console.log(response.data);
 
-<<<<<<< HEAD
     //user_city.innerHTML = response.data[0].city_id;
-=======
-    //user_city.innerHTML = response.data[0]
->>>>>>> a55ce1670e00584786b7a91daa7f87716032bb4c
 
   }
   )
