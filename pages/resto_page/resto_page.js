@@ -1,6 +1,6 @@
 let logo = document.getElementsByClassName("logo")[0];
 let resto_name = document.getElementsByClassName("resto-name");
-let city_name = document.getElementsByClassName("city-name");
+let city_name = document.getElementById("city-name");
 let description = document.getElementById("description");
 let phone_number = document.getElementById("phone-number");
 let rating = document.getElementById("rating")
@@ -96,13 +96,12 @@ axios({
   .then(function (response) {
     console.log(response);
     let city = response.data[0];
-    for (let i = 0; i < city_name.length; i++) {
-      city_name[i].innerHTML = city.city_name;
-    }
+
+    city_name.innerHTML = city.city_name;
+
   }
   )
-
-
+  
 let data2 = new FormData();
 data2.append('id', localStorage.getItem("resto_id"));
 axios({
@@ -113,11 +112,11 @@ axios({
   .then(function (response) {
     console.log(response);
     let avg_rating = response.data[0];
-    if(avg_rating.avg == null){
+    if (avg_rating.avg == null) {
       rating.innerHTML = "No rating yet";
-    }else{
-      rating.innerHTML = avg_rating.avg+ " &#9733";
+    } else {
+      rating.innerHTML = avg_rating.avg + " &#9733";
     }
-    
+
   }
   )
