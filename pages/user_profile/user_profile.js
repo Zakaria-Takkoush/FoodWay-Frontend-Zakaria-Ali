@@ -67,10 +67,10 @@ axios({
   data: data1,
 })
   .then(function (response) {
-    console.log(response.data);
-    // let city = response.data[0];
+    // console.log(response.data[0]);
+    // console.log(response.data);
 
-    // city_name.innerHTML = city.city_name;
+    user_city.innerHTML = response.data[0]
 
   }
   )
