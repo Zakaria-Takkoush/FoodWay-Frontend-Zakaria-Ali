@@ -1,4 +1,7 @@
 let logo = document.getElementsByClassName("logo")[0];
+let resto_name= document.getElementById("resto-name");
+let  city_name= document.getElementById("city-name");
+let description = document.getElementById("description");
 logo.addEventListener("click", function(){
     document.location='../landing_page/landing_page.html';
 })
@@ -71,5 +74,14 @@ axios({
 })
 .then(function (response) {
     console.log(response);
+    let resto = response.data[0];
+
+  resto_name.innerHTML=resto.resto_name;
+  description.innerHTML=resto.description;
+  
+
+
+
+
     }
 )
