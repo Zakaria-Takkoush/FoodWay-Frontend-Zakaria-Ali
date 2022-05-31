@@ -55,18 +55,35 @@ create_account.addEventListener("click", function(event) {
 
 })
 
-
 // get the id of the user
 
-/*
-// let data = new FormData();
-axios({
-    method: "get",
-    url: "http://localhost/FoodWay-Backend/login.php",
-    //        data: data,
-  }).then(function (response) {
-    users = response.data;
-    console.log(response.data);
-  
-    // loop through users object array to grab dat
-    */
+let sign_in = document.getElementById("signin");
+
+sign_in.addEventListener("click", function(event) {
+    event.preventDefault()
+
+    // get the values of email and password on login
+    const login_email = document.getElementById("logmail").value
+    const login_password = document.getElementById("logpass").value
+
+    let data = new FormData();
+    data.append('email', login_email);
+    data.append('password', login_password);
+    axios({
+    method: 'post',
+    url: 'http://localhost/FoodWay-Backend/login.php',
+    data: data,
+    })
+    .then(function (response) {
+        // console.log(response);
+        // console.log(response.data);
+        // console.log(response.data.user_id);
+        // console.log(response.data.response);
+        if (response.data.response === "Logged in") {   // if the user exists:
+            // let id = response.data.user_id
+            const id = localStorage.setItem("logged_id", response.data.user_id)     // save his id in local storage
+            document.location = "pages/landing_page/landing_page.html"; // direct the user to the landing page
+        }
+    }
+  )
+})
