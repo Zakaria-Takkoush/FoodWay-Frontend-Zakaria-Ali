@@ -49,6 +49,7 @@ create_account.addEventListener("click", function(event) {
         document.getElementById("r_password").value = "";
         //const phone_number = document.getElementById("number").value
         document.getElementById("city").value = "";
+        document.location = "index.html";
         }
     )
 
