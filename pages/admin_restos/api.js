@@ -68,7 +68,7 @@ axios({
                 <td>${restaurants[i].city_id}</td>
                 <td>${restaurants[i].description}</td>   
                 <td class="edit" onclick="updateData(${restaurants[i].resto_id})" id="edit" ><i class="fa-solid fa-pen-to-square"></i></td>
-                <td onclick="deleResto(${restaurants[i].resto_id})" class="delete" id="delete"><i class="fa-solid fa-xmark"></i></td>
+                <td onclick="deleteResto(${restaurants[i].resto_id})" class="delete" id="delete"><i class="fa-solid fa-xmark"></i></td>
                 </tr>`;
             }
             document.getElementById("tbody").innerHTML = table;
@@ -76,9 +76,9 @@ axios({
     }
     )
 
-    delete_resto.addEventListener("click", deleResto());
+    delete_resto.addEventListener("click", deleteResto());
 
-    function deleResto(resto_id) {
+    function deleteResto(resto_id) {
     let data = new FormData();
     data.append('id', resto_id);
     axios({
@@ -91,6 +91,7 @@ axios({
             console.log(result);
         }
         )}
+
 
 
 
